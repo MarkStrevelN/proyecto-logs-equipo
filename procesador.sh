@@ -6,6 +6,8 @@ mkdir -p resultados
 
 grep "ERROR" sistema.log > resultados/errores.log
 
-echo "Proceso finalizado"
+grep "WARNING" sistema.log > resultados/alertas.log
 
-chmod +x procesador.sh
+rm -f *.tmp
+
+echo "Proceso finalizado"
