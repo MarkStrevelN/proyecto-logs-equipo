@@ -1,11 +1,6 @@
-#!/bin/bash
-
-echo "Iniciando procesamiento de logs..."
-
+﻿#!/bin/bash
+# 1. Crear la carpeta resultados si no existe
 mkdir -p resultados
 
+# 2. Extraer las lineas con la palabra ERROR
 grep "ERROR" sistema.log > resultados/errores.log
-
-echo "Proceso finalizado"
-
-chmod +x procesador.sh
